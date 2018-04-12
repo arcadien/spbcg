@@ -14,6 +14,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 import org.eclipse.acceleo.engine.event.IAcceleoTextGenerationListener;
 import org.eclipse.acceleo.engine.generation.strategy.IAcceleoGenerationStrategy;
@@ -23,8 +24,9 @@ import org.eclipse.emf.common.util.Monitor;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.ResourceSet;
-
+import org.eclipse.uml2.uml.UMLPlugin;
 import test.TestPackage;
+import org.eclipse.uml2.uml.resources.util.UMLResourcesUtil;
 
 /**
  * Entry point of the 'Main' generation module.
@@ -374,10 +376,22 @@ public class Main extends AbstractAcceleoGenerator {
 					org.eclipse.uml2.uml.profile.standard.StandardPackage.eINSTANCE);
 		}
 
-		if (!isInWorkspace(TestPackage.class)) {
-			resourceSet.getPackageRegistry().put(TestPackage.eINSTANCE.getNsURI(), TestPackage.eINSTANCE);
+		// register our own profile
+		UMLResourcesUtil.init(resourceSet);
+
+		Map<String, URI> ePackageNsURIToProfileLocationMap = UMLPlugin.getEPackageNsURIToProfileLocationMap();
+		String cppProfileNsUri = TestPackage.eINSTANCE.getNsURI();
+		String profilePath = "profile/test.profile.uml#_g8Aa8D4kEeiZVJsxXekkgQ";
+
+		// Register our uml profile package, if needed
+		URI declaredURI = ePackageNsURIToProfileLocationMap.get(cppProfileNsUri);
+		if (null == declaredURI) {
+			System.err.println("Registering 'Test' profile");
+			URI relativeURI = URI.createURI(profilePath);
+			ePackageNsURIToProfileLocationMap.put(TestPackage.eINSTANCE.getNsURI(), relativeURI);
 		}
 
+				
 		/*
 		 * If you want to change the content of this method, do NOT forget to change the
 		 * "@generated" tag in the Javadoc of this method to "@generated NOT". Without
