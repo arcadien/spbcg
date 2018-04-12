@@ -1,0 +1,21 @@
+[comment encoding = UTF-8 /]
+[module main('http://www.eclipse.org/emf/2002/Ecore', 
+'http://www.eclipse.org/uml2/5.0.0/Types', 
+'http://www.eclipse.org/uml2/5.0.0/UML', 
+'http://www.eclipse.org/uml2/5.0.0/UML/Profile/Standard',
+'http://test.profile') /]
+
+[template public main(model : Model)]
+
+[comment @main/]
+	
+[for (anElement : Element | model->collect(allOwnedElements()))]
+	[if (not anElement.oclAsType(Classifier).oclIsInvalid() ) ]
+		[file ( anElement.oclAsType(Classifier).name +'_stereotypes.txt', false, 'UTF-8') ]
+			[for (aStereotype : Stereotype | anElement.getAppliedStereotypes())]
+[aStereotype.name /]
+			[/for]
+    	[/file]
+	[/if]
+[/for]
+[/template]

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:test="http://test.profile" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http://test.profile /org.eclipse.acceleo.test/profile/test.profile.uml#_jxAKwD4nEeiZVJsxXekkgQ">
+  <uml:Model xmi:id="_I218UD4lEeiZVJsxXekkgQ" name="model">
+    <packageImport xmi:type="uml:PackageImport" xmi:id="_I8G20D4lEeiZVJsxXekkgQ">
+      <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+    </packageImport>
+    <packagedElement xmi:type="uml:Component" xmi:id="_JzcHcD4lEeiZVJsxXekkgQ" name="Component3"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_KBGI8D4lEeiZVJsxXekkgQ" name="Component4"/>
+    <packagedElement xmi:type="uml:Component" xmi:id="_Li5S4D4lEeiZVJsxXekkgQ" name="Component5"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_T9_28D4lEeiZVJsxXekkgQ" name="Class6"/>
+    <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_sEwwsD4nEeiZVJsxXekkgQ">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sExXwT4nEeiZVJsxXekkgQ" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sExXwj4nEeiZVJsxXekkgQ" key="Version" value="0.0.3"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sExXwz4nEeiZVJsxXekkgQ" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sExXxD4nEeiZVJsxXekkgQ" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sExXxT4nEeiZVJsxXekkgQ" key="Date" value="2018-04-12"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_sExXxj4nEeiZVJsxXekkgQ" key="Author" value=""/>
+      </eAnnotations>
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_sExXwD4nEeiZVJsxXekkgQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+        <references xmi:type="ecore:EPackage" href="/org.eclipse.acceleo.test/profile/test.profile.uml#_jxAKwD4nEeiZVJsxXekkgQ"/>
+      </eAnnotations>
+      <appliedProfile xmi:type="uml:Profile" href="/org.eclipse.acceleo.test/profile/test.profile.uml#_g8Aa8D4kEeiZVJsxXekkgQ"/>
+    </profileApplication>
+  </uml:Model>
+  <test:BundleA xmi:id="_7T5NUD4nEeiZVJsxXekkgQ" base_Component="_JzcHcD4lEeiZVJsxXekkgQ"/>
+  <test:BundleB xmi:id="_7zQp4D4nEeiZVJsxXekkgQ" base_Component="_KBGI8D4lEeiZVJsxXekkgQ"/>
+  <test:BundleC xmi:id="_8WHfUD4nEeiZVJsxXekkgQ" base_Component="_Li5S4D4lEeiZVJsxXekkgQ"/>
+  <test:FirstClassObject xmi:id="_82j58D4nEeiZVJsxXekkgQ" base_Class="_T9_28D4lEeiZVJsxXekkgQ"/>
+</xmi:XMI>

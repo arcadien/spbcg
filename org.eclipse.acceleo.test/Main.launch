@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.acceleo.ide.ui.launching.launchConfigurationType">
+    <stringAttribute key="org.eclipse.acceleo.ide.ui.ARGUMENTS" value=""/>
+    <booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_PROFILING" value="false"/>
+    <booleanAttribute key="org.eclipse.acceleo.ide.ui.COMPUTE_TRACEABILITY" value="false"/>
+    <stringAttribute key="org.eclipse.acceleo.ide.ui.LAUNCHING_STRATEGY_DESCRIPTION" value="Java Application"/>
+    <stringAttribute key="org.eclipse.acceleo.ide.ui.MODEL_PATH" value="/org.eclipse.acceleo.test/model/model.uml"/>
+    <stringAttribute key="org.eclipse.acceleo.ide.ui.TARGET_PATH" value="/org.eclipse.acceleo.test/gen-target"/>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+        <listEntry value="/org.eclipse.acceleo.test/src/org/eclipse/acceleo/test/Main.java"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+        <listEntry value="1"/>
+    </listAttribute>
+    <listAttribute key="org.eclipse.debug.ui.favoriteGroups">
+        <listEntry value="org.eclipse.debug.ui.launchGroup.run"/>
+    </listAttribute>
+    <booleanAttribute key="org.eclipse.jdt.launching.ATTR_USE_START_ON_FIRST_THREAD" value="true"/>
+    <stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="org.eclipse.acceleo.test.Main"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="&quot;D:/Users/aurelien/gen-test-workspace/org.eclipse.acceleo.test/model/model.uml&quot; &quot;D:/Users/aurelien/gen-test-workspace/org.eclipse.acceleo.test/gen-target&quot;"/>
+    <stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="org.eclipse.acceleo.test"/>
+</launchConfiguration>
