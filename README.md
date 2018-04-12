@@ -27,6 +27,3 @@ The Generator generates one file per UML element, containing names of all its ap
 ### Conclusion
 * Execute generation
 * Ensure stereotypes are printed in output files
-
-#### IT DOES NOT WORK
-
